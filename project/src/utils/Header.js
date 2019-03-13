@@ -1,30 +1,36 @@
-import styled from 'styled-components'
-import React from 'react'
-import img from '../images/bcg/homeBcg.jpeg'
+import styled from "styled-components";
+import React from "react";
+import img from "../images/bcg/homeBcg.jpeg";
+
 function HomeHeader({ img, children }) {
-  return <IndexHeader img={img}>{children}</IndexHeader>
+  return <IndexHeader img={img}>{children}</IndexHeader>;
 }
 function PageHeader({ img, children }) {
-  return <DefaultHeader img={img}>{children}</DefaultHeader>
+  return <DefaultHeader img={img}>{children}</DefaultHeader>;
 }
 
 const IndexHeader = styled.header`
-  min-height: calc(100vh - 68px);
+  min-height: calc(
+    100vh - 54.78px
+  ); /* px are found inspecting chrome dev tools */
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(${props => props.img}) center/cover fixed no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
+
+// passes everything except for the height
 const DefaultHeader = styled(IndexHeader)`
   min-height: 60vh;
-`
+`;
 
+// makes sure the image is set as default just in case
 HomeHeader.defaultProps = {
-  img: img,
-}
+  img: img
+};
 PageHeader.defaultProps = {
-  img: img,
-}
+  img: img
+};
 
-export { HomeHeader, PageHeader }
+export { HomeHeader, PageHeader };

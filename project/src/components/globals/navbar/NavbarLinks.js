@@ -68,7 +68,7 @@ const LinkWrapper = styled.ul`
   }
   height: ${props => (props.open ? "152px" : "0px")};
   overflow: hidden;
-  ${styles.transObject({ time: "1s" })};
+  ${styles.transObject({ time: "0.5s" })};
   /* media query for aligning links for desktop viewing  */
   @media (min-width: 768px) {
     height: auto; /*  allows to see the links even if hamburger is not pressed */
