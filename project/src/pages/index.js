@@ -1,11 +1,10 @@
 import React from "react";
-
-import { FaBeer } from "react-icons/fa";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { HomeHeader, Banner, BannerButton } from "../utils";
 import img from "../images/bcg/homeBcg.jpeg";
 import QuickInfo from "../components/HomePageComponent/QuickInfo";
+import Gallery from "../components/HomePageComponent/Gallery";
 
 const IndexPage = () => (
   <Layout>
@@ -17,6 +16,7 @@ const IndexPage = () => (
       </Banner>
     </HomeHeader>
     <QuickInfo />
+    <Gallery />
   </Layout>
 );
 
